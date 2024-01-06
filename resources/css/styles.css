@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --bright-purple: hsl(253, 91%, 68%);
+}
+
+body {
+    align-items: center;
+    background-color: var(--pale-blue);
+    background-image: url('../../images/pattern-background-mobile.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100svh;
+}
+
+.app {
+    margin-top: auto;
+    width: min(100%, 450px);
+}
+
+.component {
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 2rem auto;
+    overflow: hidden;
+    width: min(90%, 450px);
+}
+
+.component__order-summary {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.component__order-summary__img {
+    width: 100%;
+}
+
+.component__order-summary__title {
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.component__order-summary__text {
+    color: var(--desaturated-blue);
+    line-height: 1.5;
+    width: 90%;
+}
+
+.component__order-summary__plan {
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 90%;
+}
+
+.component__order-summary__plan-description {
+    margin-right: 2rem;
+}
+
+.component__order-summary__plan-name {
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.component__order-summary__plan-price {
+    color: var(--desaturated-blue);
+    font-weight: 700;
+}
+
+.component__order-summary__plan-change {
+    background-color: transparent;
+    border: none;
+    color: var(--bright-blue);
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: underline;
+    transition: all .3s ease;
+}
+
+.component__order-summary__plan-change:hover {
+    color: var(--bright-purple);
+    text-decoration: none;
+}
+
+.component__order-summary__proceed {
+    background-color: var(--bright-blue);
+    border-radius: 0.8rem;
+    border: none;
+    box-shadow: 0 10px 10px 5px var(--pale-blue);
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 1rem;
+    transition: background-color .3s ease;
+    width: 90%;
+}
+
+.component__order-summary__proceed:hover {
+    background-color: var(--bright-purple);
+}
+
+.component__order-summary__cancel {
+    background-color: transparent;
+    border: none;
+    color: var(--desaturated-blue);
+    cursor: pointer;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    transition: color .3s ease;
+}
+
+.component__order-summary__cancel:hover {
+    color: var(--dark-blue);
+}
+
+.attribution { 
+    font-size: 11px;
+    margin-top: auto; 
+    text-align: center; 
+}
+    
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        background-image: url('../../images/pattern-background-desktop.svg');
+    }
+}
